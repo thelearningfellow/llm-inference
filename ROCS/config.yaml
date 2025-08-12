@@ -1,0 +1,22 @@
+model_list:
+  - model_name: microsoft/Phi-4-mini-instruct
+    litellm_params:
+      model: openai/microsoft/Phi-4-mini-instruct
+      api_base: <ENDPOINT_URL>/v1
+      api_key: <API_KEY>
+      rpm: 6      # Rate limit for this deployment: in requests per minute (rpm)
+  - model_name: microsoft/Phi-4-mini-instruct
+    litellm_params:
+      model: openai/microsoft/Phi-4-mini-instruct
+      api_base: <ENDPOINT_URL>/v1
+      api_key: <API_KEY>
+      rpm: 6      # Rate limit for this deployment: in requests per minute (rpm)
+
+router_settings:
+  routing_strategy: simple-shuffle # Literal["simple-shuffle", "least-busy", "usage-based-routing","latency-based-routing"], default="simple-shuffle"
+  # model_group_alias: {"gpt-4": "gpt-3.5-turbo"} # all requests with `gpt-4` will be routed to models with `gpt-3.5-turbo`
+  num_retries: 2
+  timeout: 30                                # 30 seconds
+  # redis_host: <your redis host>                # set this when using multiple litellm proxy deployments, load balancing state stored in redis
+  # redis_password: <your redis password>
+  # redis_port: 1992
