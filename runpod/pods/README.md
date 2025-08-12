@@ -32,14 +32,17 @@ curl ${ENDPOINT}/v1/chat/completions \
 
 
 ## Speculative Decoding
+Running the model with Eagle3 based speculative decoding. vLLM currently only supports Eagle3 draft models for Llama based models.
 ```sh
 vllm serve unsloth/Meta-Llama-3.1-8B-Instruct --speculative-config '{"model": "yuhuili/EAGLE3-LLaMA3.1-Insuct-8B", "draft_tensor_parallel_size": 1, "num_speculative_tokens": 5, "method": "eagle3"}'
 ```
 
+Running the model without speculative decoding
 ```sh
 vllm serve unsloth/Meta-Llama-3.1-8B-Instruct
 ```
 
+You can measure the time taken by each deployment with the following curl request. Though beware of the cache warm-up with prefix caching that is enabled by default.
 ```sh 
 export ENDPOINT=https://xj2c6ulvnmqbk7-8080.proxy.runpod.net
 curl ${ENDPOINT}/v1/chat/completions \
