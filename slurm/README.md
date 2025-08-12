@@ -1,5 +1,5 @@
 # Deploying LLMs on Slurm 
-This file contains instructions on how to deploy LLMs using vLLM on Slurm in ROCS cluster.
+This file contains instructions on how to deploy LLMs using vLLM on a Slurm cluster.
 
 
 ## Creating mamba environment
