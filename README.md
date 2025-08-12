@@ -2,7 +2,7 @@
 
 This repo contains the instructions and scripts related to LLM inference workshop.
 
-`ROCS`: contains the instructions for running LLMs on the ROCS cluster
+`slurm`: contains the instructions for running LLMs on a slurm cluster
 
 `runpod`: contains the instructions for running LLMs on Runpod in Pods and in Serverless settings 
 

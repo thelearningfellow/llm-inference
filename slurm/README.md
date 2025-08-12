@@ -78,7 +78,7 @@ curl ${ENDPOINT}/v1/chat/completions \
 ```
 
 ## Batch inference with Slurm
-```
+```sh
 sbatch batch-inference-script.sh -i inputs.jsonl -o results.jsonl --model microsoft/Phi-4-mini-instruct
 ```
 
@@ -102,7 +102,7 @@ hey -n 10 -c 2 \
     ],
     "max_tokens": 128
   }' \
-  http://172.18.0.12:4000/v1/chat/completions
+  ${ENDPOINT}/v1/chat/completions
 ```
 
 ## Notes

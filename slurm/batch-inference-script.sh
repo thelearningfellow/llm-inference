@@ -9,7 +9,6 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=32GB
 #SBATCH --gres=gpu:a100:1
-#SBATCH --reservation=interactive
 
 set -e # stop bash script on first error
 

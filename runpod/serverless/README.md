@@ -8,7 +8,7 @@ with runpod docker image: `runpod/worker-v1-vllm:v2.7.0stable-cuda12.1.0`
 
 How to send requests to the serverless endpoint
 ```sh
-ENDPOINT_ID=<ENDPOINT-ID>
+ENDPOINT_ID=0fsraa5ocov4kd
 ENDPOINT=https://api.runpod.ai/v2/${ENDPOINT_ID}/openai
 
 curl ${ENDPOINT}/v1/chat/completions \
